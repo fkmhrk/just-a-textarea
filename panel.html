@@ -5,13 +5,17 @@
     <script>
       function submit() {
         let text = document.querySelector('#text').value
-        document.querySelector('#content').innerText = text
+        let size = document.querySelector('#size').value
+        let content = document.querySelector('#content')
+        
+        content.innerText = text
+        content.style.fontSize = size + 'px'
       }
     </script>
   </head>
   <body>
     <div>
-      <input id="text" type="text"><button onclick="submit()">OK</button>
+      <input id="text" type="text"><input id="size" type="number" value="48" placeholder="size"><button onclick="submit()">OK</button>
     </div>
     <h1 id="content" style="font-size: 48px"></h1>
   </body>
